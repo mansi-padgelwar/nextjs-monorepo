@@ -55,14 +55,14 @@ export const handleLanguage = (
     setLanguage(lang);
     const newSelectedFlights = switchLanguage(initialFlights,lang);
     if(newSelectedFlights !== undefined){
-      setSelectedFlights(newSelectedFlights); //LINE 58
+      setSelectedFlights(newSelectedFlights); 
     }
 }
 
 function Home ({ initialFlights }: HomeProps): React.JSX.Element {
   const [isVisible, setIsVisible] = useState(false)
   const [language, setLanguage] = useState('en')
-  const [selectedFlights, setSelectedFlights] = useState(initialFlights[0]?.en)
+  const [selectedFlights, setSelectedFlights] = useState<FlightInfo[] | undefined>(initialFlights[0]?.en);
   const shouldRenderButtons = process.env.NODE_ENV === 'test'
 
  const handleLanguageClick = (lang: string): void => {
@@ -100,7 +100,7 @@ function Home ({ initialFlights }: HomeProps): React.JSX.Element {
           </button>
         </>
        )}
-      <FlightStatus flightData={selectedFlights} />
+      <FlightStatus flightData={selectedFlights || []} />
       <div
         className={styles.statusContainer}
         data-testid="flight-details-container1"
