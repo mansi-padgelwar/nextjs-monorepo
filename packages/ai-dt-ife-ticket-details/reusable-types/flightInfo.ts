@@ -1,0 +1,16 @@
+export type FlightInfo = {
+    carrierCode: string,
+    flightNumber: string,
+    origin: string,
+    destination: string,
+    originAirPortName: string,
+    destinationAirPortName: string,
+    totalJourneyTime: string,
+    scheduledDepartureDate: string,
+    scheduledArrivalDate: string,
+    scheduledDepartureTime: string,
+    scheduledDepartureTerminal: string,
+    scheduledDepartureGate: string,
+    scheduledArrivalTime: string,
+    scheduledArrivalTerminal: string,
+}
