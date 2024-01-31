@@ -1,8 +1,0 @@
-.flightDetailsContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: 0.8rem;
-  align-items: center;
-  padding: 1rem;
-}
