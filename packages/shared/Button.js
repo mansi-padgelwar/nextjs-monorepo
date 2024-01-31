@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 
 const Button = ({ children, text }) => {
   const handleClick = () => {
-    console.log("log click value", text);
+    console.log("log click value", text
+    );
   };
 
   return (
