@@ -1,0 +1,81 @@
+.FlightStatusContainer {
+  width: 50%;
+}
+
+.StatusContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.StatusTime {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+}
+
+.FlightNumber {
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 600;
+  border: 2px solid #7030a052;
+  border-radius: 16px;
+  padding: 8px 16px;
+  margin-bottom: 1rem;
+}
+
+.FlightPathContainer {
+  position: relative;
+}
+
+.PlaneContainer {
+  position: absolute;
+  left: -4%;
+  top: 4px;
+  bottom: -1%;
+  transform: rotate(15deg);
+}
+
+.TiltRight {
+  transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+  .StatusTime {
+    font-size: 0.7rem;
+  }
+}
+
+.FlightPathContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  border-radius: 50%;
+  border-top-width: 1.5px;
+  border-top-color: black;
+  border-top-style: solid;
+  margin: 0 auto;
+}
+
+.AirportCode {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.SourceCode {
+  left: -20%;
+}
+
+.DestinationCode {
+  right: -20%;
+}
+
+@media (max-width: 768px) {
+  .AirportCode {
+    font-size: 0.9rem;
+  }
+}
