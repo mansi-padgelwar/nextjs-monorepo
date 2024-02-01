@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import languages from '../data/languages.json';
 import { GetServerSideProps } from 'next';
 import { FlightInfo } from '../reusable-types/flightInfo';
-
+import ImageComponent from 'shared/ImageComponent';
 const inter = Inter({ subsets: ['latin'] })
 
 export const getServerSideProps:GetServerSideProps = async ({req, locale}:any) => {  
@@ -23,7 +23,7 @@ type TicketDetailsProps = {
   flightInfo: FlightInfo;
 }
 
-const TicketDetails: React.FC<TicketDetailsProps> = ({flightInfo}) => {
+const TicketDetails: React.FC<TicketDetailsProps> = ({flightInfo}: TicketDetailsProps) => {
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
   // const handleLanguage = (language:string) => {
@@ -49,7 +49,11 @@ const TicketDetails: React.FC<TicketDetailsProps> = ({flightInfo}) => {
         <div>
           <div style={{fontSize: '4rem'}}> {`${flightInfo?.carrierCode} ${flightInfo.flightNumber}`} </div>
           <div style={{fontSize: '2.5rem'}}> 
-            <img src="/images/seat.png" style={{width:'1em'}} alt='Seat Image'/> 12 A </div>
+          {/* <Button text="App 2 clicked">Click me!</Button> */}
+            <ImageComponent imagePath={'/images/seat.png'} altText={'Seat Image'} styleObj={{width: '1em'}}/>
+            {/* <ImageComponent /> */}
+             12 A 
+            </div>
           <div style={{fontSize: '1.3rem'}}>  {languages[selectedLanguage as keyof typeof languages].business} </div>
         </div>
       </main>
