@@ -2,6 +2,8 @@ import React from 'react'
 import styles from './FlightStatus.module.css'
 import { PiAirplaneTiltFill } from 'react-icons/pi'
 import { type FlightInfo } from 'data/flights'
+import CustomIcons from "@nextjs-monorepo/shared/CustomIcons/index"
+
 
 type NullableFlightInfoArray = FlightInfo[] | null
 
@@ -50,7 +52,8 @@ const FlightPath: React.FC = () => {
   return (
     <div className={styles.FlightPathContainer}>
       <div className={styles.PlaneContainer}>
-        <PiAirplaneTiltFill size={32} className={styles.TiltRight} />
+        <CustomIcons icon={PiAirplaneTiltFill} iconSize={32} className="TiltRight" />
+        {/* <PiAirplaneTiltFill size={32} className={styles.TiltRight} /> */}
       </div>
       <div className={`${styles.AirportCode} ${styles.SourceCode}`}>DEL</div>
       <div className={`${styles.AirportCode} ${styles.DestinationCode}`}>
