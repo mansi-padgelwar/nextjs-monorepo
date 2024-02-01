@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface ImageProps {
-    src: string;
-    alt: string;
-    className?: string;
+    imagePath: string;
+    altText?: string;
+    styleObj?: any;
 }
 
 const ImageComponent: React.FC<ImageProps> = ({imagePath, styleObj, altText}) => {
