@@ -1,10 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
 
-const Button = ({ children, text }) => {
+const Button = ({ children, text }: { children: React.ReactNode, text: string }) => {
   const handleClick = () => {
-    console.log("log click value", text
-    );
+    console.log("log click value", text);
   };
 
   return (
