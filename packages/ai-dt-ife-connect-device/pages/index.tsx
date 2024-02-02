@@ -6,6 +6,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import styles from './index.module.css'
 import { languages } from '../data/languages'
 import { NextFont } from 'next/dist/compiled/@next/font';
+import ImageComponent from 'shared/ImageComponent';
+
 
 const inter: NextFont = Inter({ subsets: ['latin'] })
 declare global {
@@ -74,20 +76,12 @@ export default function Home() {
         <div onTransitionEndCapture={handleTransitionEnd} className={`${styles.deviceWrapper} ${openDeviceWrapper && styles.deviceWrapperOpen}`}></div>
         <div className={`${styles.deviceContainer}`}>
           <div className={`${openDeviceWrapper ? styles.bluetoothImgExpanded : styles.bluetoothImg}`}>
-            <Image
-              src="/images/Bluetooth.png" // Route of the image file
-              height={60} // Desired size with correct aspect ratio
-              width={60} // Desired size with correct aspect ratio
-              alt="bluetooth"
-            />
+            <ImageComponent imagePath={'/images/Bluetooth.png'} styleObj={{width: '60',height:'60'}} altText='bluetooth'            />
           </div>
           <div className={`${styles.earphoneContainer} ${openDeviceWrapper && styles.earphoneContainerExpanded}`}>
             <div>
-              <Image
-                src="/images/earphone.png" // Route of the image file
-                height={50} // Desired size with correct aspect ratio
-                width={50} // Desired size with correct aspect ratio
-                alt="earphone"
+              <ImageComponent imagePath={'/images/earphone.png'} styleObj={{width: '50',height:'50'}} // Route of the image file    
+                altText={"earphone"}
               />
               {/* <FiHeadphones  className={`${styles.earphoneImg}`}/> */}
             </div>
